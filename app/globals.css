@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 20% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 20%;
+    --primary: 205 76% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 205 30% 95%;
+    --secondary-foreground: 210 20% 20%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 10% 45%;
+    --accent: 205 30% 93%;
+    --accent-foreground: 210 20% 25%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 148 55% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --border: 210 15% 88%;
+    --input: 210 15% 88%;
+    --ring: 205 76% 42%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 210 30% 8%;
+    --foreground: 210 10% 95%;
+    --card: 210 30% 10%;
+    --card-foreground: 210 10% 95%;
+    --popover: 210 30% 10%;
+    --popover-foreground: 210 10% 95%;
+    --primary: 205 76% 52%;
+    --primary-foreground: 210 30% 8%;
+    --secondary: 210 20% 18%;
+    --secondary-foreground: 210 10% 95%;
+    --muted: 210 20% 16%;
+    --muted-foreground: 210 10% 60%;
+    --accent: 210 20% 18%;
+    --accent-foreground: 210 10% 95%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 148 45% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 80% 55%;
+    --warning-foreground: 0 0% 10%;
+    --border: 210 15% 20%;
+    --input: 210 15% 20%;
+    --ring: 205 76% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-tap-highlight-color: transparent;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+}
